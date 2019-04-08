@@ -62,7 +62,7 @@ describe("enhancer.js", () => {
       durability: 10
     };
 
-    it("should decrease durability by 5 if enhacement is less than 15", () => {
+    it("should decrease durability by 5 if enhancement is less than 15", () => {
       expect(fail(item1)).toHaveProperty("durability", 5);
     });
 
@@ -72,7 +72,7 @@ describe("enhancer.js", () => {
       durability: 100
     };
 
-    it("should decrease durability by 10 if enhancemnet is greater than 15", () => {
+    it("should decrease durability by 10 if enhancemnet is greater than or equal to 15", () => {
       expect(fail(item2)).toHaveProperty("durability", 90);
     });
 
@@ -82,8 +82,9 @@ describe("enhancer.js", () => {
       durability: 100
     };
 
-    it("should decrease enhancement by 1 if enhancement is greater than 16", () => {
-        expect(fail(item3)).toHaveProperty("enhancement", 24);
+    it("should decrease enhancement by 1 and decrease durability by 10 if enhancement is greater than 16", () => {
+        expect(fail(item3)).toHaveProperty("enhancement", 16);
+        expect(fail(item3)).toHaveProperty("durability", 90)
     });
   });
 });
