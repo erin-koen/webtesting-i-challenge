@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "jest": "^24.7.1"
+  },
+  "name": "webtesting-i-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": "https://github.com/erin-koen/webtesting-i-challenge.git",
+  "author": "erin-koen <erin.koen@gmail.com>",
+  "license": "MIT"
+}
